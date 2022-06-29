@@ -28,7 +28,6 @@ public class ReferenceDataRepositoryImpl implements ReferenceDataRepository {
 		Sort sort = Sort.by(language).ascending();
 		return Optional.ofNullable(this.referenceDataJPARepository.getReferenceDataType(referenceDataType, sort))
 				.map(referenceDataMapper::mapToModel);
-//		return Optional.ofNullable(this.referenceDataJPARepository.findAll()).map(referenceDataMapper::mapToModel);
 	}
 
 }

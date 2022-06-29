@@ -22,7 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 @Slf4j
 @RequestMapping(APIConstant.REFERENCE_DATA_BASE_PATH)
-@Api(description = "Reference data for application to have all the form values")
+@Api("Reference data for application to have all the form values")
 public class ReferenceDataController {
 
 	@NonNull
@@ -33,7 +33,6 @@ public class ReferenceDataController {
 	@GetMapping(APIConstant.REFERENCE_DATA_TYPE)
 	public List<VreferenceData> getReferenceData(@RequestHeader("Accept-language") String language,
 		@RequestBody()	List<String> referenceDataType) {
-		List<VreferenceData> vreferenceData = this.referenceDataService.getReferenceData(language, referenceDataType);
-		return vreferenceData;
+		return this.referenceDataService.getReferenceData(language, referenceDataType);
 	}
 }

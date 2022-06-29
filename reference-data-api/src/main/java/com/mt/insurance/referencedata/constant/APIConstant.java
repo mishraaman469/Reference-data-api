@@ -2,7 +2,7 @@ package com.mt.insurance.referencedata.constant;
 
 public class APIConstant {
 
-	public APIConstant() {
+	private APIConstant() {
 		super();
 
 	}
